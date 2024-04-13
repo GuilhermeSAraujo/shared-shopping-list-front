@@ -1,10 +1,20 @@
-import { Login } from "./Pages/Login";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 function App() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
-      <Login />
-    </main>
+    <header>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+    </header>
   );
 }
 
